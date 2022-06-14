@@ -5,56 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-    <style>
-        * {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: aqua;
-        }
-
-        h1, #form {
-            text-align: center;
-        }
-
-        div {
-            margin: 5px 0;
-        }
-
-        form {
-            display: inline-block;
-            background-color: aquamarine;
-            width: 300px;
-            padding: 15px;
-            border: 2px solid cadetblue;
-            border-radius: 5px;
-        }
-
-        .campo {
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 <body>
-    <h1>Formulário em HTML</h1>
+    <h1>Cadastro</h1>
     <div id="form">
-        <form>
+        <form method="post" action="cadastro.php">
             <div class="campo">
-                <label for="c1">Campo 1</label>
-                <input type="text" id="c1">
+                <label for="c1">Nome:</label>
+                <input class="inpute" type="text" name="nome">
             </div>
             <div class="campo">
-                <label for="c2">Campo 2</label>
-                <input type="text" id="c2">
+                <label for="c2">Nascimento:</label>
+                <input class="inpute" type="date" name="data">
             </div>
             <div class="campo">
-                <label for="c3">Campo 3</label>
-                <input type="number" id="c3">
+                <label for="c3">Email:</label>
+                <input class="inpute" type="email" name="email">
             </div>
             <div class="campo">
-                <label for="c4">Campo 4</label>
-                <input type="checkbox" id="c4">
+                <label for="c4">Senha:</label>
+                <input class="inpute" type="password" name="senha">
             </div>
             <div id="submit">
                 <input type="submit">
