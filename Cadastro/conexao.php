@@ -2,10 +2,10 @@
 
 $servidor = "localhost";
 $usuario = "root";
-$senha = "";
+$pass = "";
 $banco = "cadastro";
 
-$conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
+$conexao = mysqli_connect($servidor, $usuario, $pass, $banco);
 
 if (!$conexao) die("Deu muito ruim!");
 echo "Conexão realizada com sucesso!<br>";

@@ -2,14 +2,14 @@
 
 include("conexao.php");
 
-$nome = $_POST['nome'];
-$data = $_POST['data'];
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+$nome = $_GET['nome'];
+$data = $_GET['data'];
+$email = $_GET['email'];
+$senha = $_GET['senha'];
 
 echo "O nome é $nome, a data de nascimento é $data e o email é $email.<br><br>";
 
-$sql = "INSERT INTO usuarios VALUES ('Ciclano', '2000-03-11', 'ciclano@email.com', 'ciclano123')";
+$sql = "INSERT INTO usuarios VALUES ('$nome', '$data', '$email', '$senha')";
 
 if(mysqli_query($conexao, $sql)) echo "Cadastro realizado com sucesso";
 else echo "Erro: ".mysqli_connect_error($conexao);
