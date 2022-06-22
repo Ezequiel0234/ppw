@@ -11,10 +11,10 @@
 <body>
     <h1>Cadastro</h1>
     <div id="form">
-        <form method="get" action="cadastro.php">
+        <form method="get" action="cadastro.php" onsubmit="return validar()">
             <div class="campo">
                 <label for="c1">Nome:</label>
-                <input class="inpute" type="text" name="nome" id="nome">
+                <input class="inpute" type="text" name="nome">
             </div>
             <div class="campo">
                 <label for="c2">Nascimento:</label>
@@ -29,9 +29,30 @@
                 <input class="inpute" type="password" name="senha">
             </div>
             <div id="submit">
-                <input type="submit" onclick="return validar()">
+                <input type="submit">
             </div>
         </form>
     </div>
+    <script>
+
+        var r = 255, g = 127, b = 0
+        var rc = false, bc = true
+
+        function background() {
+            if (r == 0) rc = true
+            if (r == 255) rc = false
+            if (b == 0) bc = true
+            if (b == 255) bc = false
+            rc ? r++ : r--
+            bc ? b++ : b--
+
+            if (r == 256) r = 0
+            var cor = `rgb(${r}, ${g}, ${b})`
+            document.body.style.backgroundColor = cor
+        }
+
+        setInterval(background, 10)
+
+    </script>
 </body>
 </html>

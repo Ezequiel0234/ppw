@@ -1,5 +1,16 @@
 function validar() {
-    if (document.getElementById("nome").value.length != 0) return true
-    alert("Por favor, preencha o campo nome.")
-    return false;
+    var dados = document.getElementsByClassName('inpute')
+    var vazio = false
+
+    for (let i = 0; i < dados.length; i++)
+        if (dados[i].value == 0) {
+            vazio = true
+            break
+        }
+
+    if (!vazio) return true
+    alert("Por favor, preencha todos os campos.")
+    return false
+
+    
 }
