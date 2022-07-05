@@ -35,20 +35,40 @@
     </div>
     <script>
 
-        var r = 255, g = 127, b = 0
-        var rc = false, bc = true
+        var r, g, b
+        var c = [255, 0, 0], i = 0, j = 1
+        var funcao = [rainbow, randomized]
+        var k = 0
 
-        function background() {
-            if (r == 0) rc = true
-            if (r == 255) rc = false
-            if (b == 0) bc = true
-            if (b == 255) bc = false
-            rc ? r++ : r--
-            bc ? b++ : b--
+        function rainbow() {
+            c[i]--
+            c[j]++
 
-            if (r == 256) r = 0
+            if (c[j] == 255) {
+                i++
+                j++
+            }
+
+            if (i == 3) i = 0
+            if (j == 3) j = 0
+
+            var cor = `rgb(${c[0]}, ${c[1]}, ${c[2]})`
+            document.body.style.backgroundColor = cor
+        }
+
+        function randomized() {
+            r = Math.random() * 255
+            g = Math.random() * 255
+            b = Math.random() * 255
+
             var cor = `rgb(${r}, ${g}, ${b})`
             document.body.style.backgroundColor = cor
+        }
+
+        function background() {
+            if (Math.random() > 0.999) k = k == 0 ? 1 : 0
+
+            funcao[k]()
         }
 
         setInterval(background, 10)
