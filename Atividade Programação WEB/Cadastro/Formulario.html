@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script type="text/javascript" src="js.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <div id="form">
+        <form method="get" action="cadastro.php" onsubmit="return validar()">
+            <div class="campo">
+                <label for="c1">Nome:</label>
+                <input class="inpute" type="text" name="nome">
+            </div>
+            <div class="campo">
+                <label for="c2">Nascimento:</label>
+                <input class="inpute" type="date" name="data">
+            </div>
+            <div class="campo">
+                <label for="c3">Email:</label>
+                <input class="inpute" type="email" name="email">
+            </div>
+            <div class="campo">
+                <label for="c4">Senha:</label>
+                <input class="inpute" type="password" name="senha">
+            </div>
+            <div id="submit">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+    <script>
+
+        var r = 255, g = 1, b = 0
+        var rc, bc, gc
+
+        function background() {
+            if (r == 0) rc = true
+            if (r == 255) rc = false
+            if (b == 0) bc = true
+            if (b == 255) bc = false
+            if (g == 1) gc = true
+            if (g == 255) gc = false
+            rc ? r++ : r--
+            bc ? b++ : b--
+            gc ? g += 2 : g -=2
+
+            if (r == 256) r = 0
+            var cor = `rgb(${r}, ${g}, ${b})`
+            document.body.style.backgroundColor = cor
+        }
+
+        setInterval(background, 10)
+
+    </script>
+</body>
+</html>

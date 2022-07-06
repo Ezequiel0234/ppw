@@ -1,0 +1,308 @@
+/* Configurações Gerais */
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    overflow: auto;
+}
+
+header {
+    height: 90px;
+}
+
+footer {
+    height: 150px;
+}
+
+header img {
+    position: relative;
+    top: 40%;
+}
+
+h1 {
+    margin: 0;
+    position: relative;
+    color: white;
+    font-size: 24px;
+}
+
+header h1 {
+    top: 30%;
+}
+
+span {
+    display: block;
+    color: white;
+    font-size: 16px;
+}
+
+div {
+    box-sizing: border-box;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+p {
+    padding: 0 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.item-header {
+    width: 15%;
+}
+
+.conteudo {
+    background-color: #D30000;
+    height: 80%;
+}
+
+.footer-texto {
+    width: 100%;
+    height: 30%;
+    text-align: left;
+}
+
+#titulo {
+    width: 70%;
+    text-align: center;
+}
+
+#gap-vertical {
+    height: 20%;
+}
+
+#gap-lateral {
+    width: 5%;
+    height: 100%;
+}
+
+#footer-conteudo {
+    width: 95%;
+    height: 100%;
+}
+
+#gap-texto {
+    width: 100%;
+    height: 10%;
+}
+
+
+/* Responsivo */
+
+.hora-manchete {
+    position: relative;
+    color: #D30000;
+    font-size: 20px;
+    top: 60%;
+}
+
+.manchete {
+    color: #D30000;
+    font-size: 20px;
+}
+
+.lide {
+    color: #D30000;
+    font-size: 16px;
+}
+
+#ultima-hora {
+    width: 100%;
+    height: 500px;
+}
+
+.gap-hora {
+    width: 5%;
+    height: 90%;
+}
+
+#hora1 {
+    width: 42.5%;
+    height: 90%;
+    background-image: url("putin.webp");
+}
+
+.horas {
+    width: 42.5%;
+    height: 42.5%;
+}
+
+#hora2 {
+    background-image: url("lazaro.jpeg");
+}
+
+#hora3 {
+    background-image: url("bolsonista.jpeg");
+}
+
+#gap-horas {
+    width: 42.5%;
+    height: 5%;
+}
+
+#gap-final-horas {
+    width: 100%;
+    height: 10%;
+}
+
+#noticias {
+    width: 100%;
+    height: 600px;
+}
+
+#noticias-conteudo {
+    width: 80%;
+    height: 100%;
+}
+
+.gap-lateral-noticias {
+    width: 10%;
+    height: 100%;
+}
+
+.noticia {
+    width: 100%;
+    height: 33.33%;
+}
+
+.noticia-img {
+    width: 40%;
+    height: 90%;
+    border-bottom: 2px solid #D30000;
+}
+
+.noticia-manchete {
+    width: 60%;
+    height: 45%;
+}
+
+.noticia-lide {
+    width: 60%;
+    height: 45%;
+    border-bottom: 2px solid #D30000;
+}
+
+.gap-noticia {
+    width: 100%;
+    height: 10%;
+}
+
+@media screen and (max-width: 800px) {
+
+    .manchete {
+        color: #D30000;
+        font-size: 16px;
+    }
+
+    .lide {
+        color: #D30000;
+        font-size: 12px;
+    }
+
+    #ultima-hora {
+        display: none;
+    }
+    
+    #noticias {
+        width: 100%;
+        height: 600px;
+    }
+
+    #noticias-conteudo {
+        width: 80%;
+        height: 100%;
+    }
+
+    .gap-lateral-noticias {
+        width: 10%;
+        height: 100%;
+    }
+
+    .noticia {
+        width: 100%;
+        height: 33.33%;
+    }
+
+    .noticia-img {
+        width: 40%;
+        height: 90%;
+        border-bottom: 2px solid #D30000;
+    }
+
+    .noticia-manchete {
+        width: 60%;
+        height: 45%;
+    }
+
+    .noticia-lide {
+        width: 60%;
+        height: 45%;
+        border-bottom: 2px solid #D30000;
+    }
+
+    .gap-noticia {
+        width: 100%;
+        height: 10%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .manchete {
+        color: #D30000;
+        font-size: 12px;
+    }
+
+    #ultima-hora {
+        display: none;
+    }
+
+    #noticias {
+        width: 100%;
+        height: 900px;
+    }
+
+    #noticias-conteudo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gap-lateral-noticias {
+        display: none;
+    }
+
+    .noticia {
+        width: 100%;
+        height: 300px;
+    }
+
+    .noticia-img {
+        width: 100%;
+        height: 70%;
+        border-bottom: 0;
+    }
+
+    .noticia-manchete {
+        width: 100%;
+        height: 15%;
+        border-bottom: 2px solid #D30000;
+    }
+
+    .noticia-lide {
+        display: none;
+    }
+
+    .gap-noticia {
+        display: none;
+    }
+
+}

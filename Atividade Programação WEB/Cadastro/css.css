@@ -1,0 +1,43 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: aqua;
+}
+
+h1, #form {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+label {
+    font-size: 25px;
+}
+
+div {
+    margin: 5px 0;
+    padding: 5px 0;
+}
+
+form {
+    display: inline-block;
+    background-color: aquamarine;
+    width: 600px;
+    padding: 15px;
+    border: 2px solid cadetblue;
+    border-radius: 5px;
+}
+
+.inpute {
+    float: right;
+    width: 65%;
+    height: 20px;
+}
+
+.campo {
+    text-align: left;
+}
